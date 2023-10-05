@@ -5,11 +5,11 @@ RUN apt-get -y install apt-utils gcc \
 	python3 vim unzip ruby nodejs \
 	fakeroot dbus base whiptail hexedit \
 	patch wamerican ucf manpages \
-	file luajit make lua50 dialog curl \
+	file luajit make dialog curl \
 	less cowsay netcat-openbsd \
-	lf nnn lazygit fish mosh neovim \
-	tmux bat bottom chafa figlet delta \
-	git fd ripgrep lolcat glow ncdu gh
+	nnn fish mosh neovim \
+	tmux bat chafa figlet delta \
+	git ripgrep lolcat ncdu gh
 RUN useradd -m user && echo "user:password" | chpasswd
 COPY --chown=user:user ./examples /home/user/examples
 RUN chmod -R +x  /home/user/examples/lua
